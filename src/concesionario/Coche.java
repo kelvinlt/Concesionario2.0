@@ -51,6 +51,10 @@ public class Coche {
     public Coche() {
     }
 
+    public Coche(String matricula) {
+        this.matricula = matricula;
+    }
+    
     public Coche(String matricula, int cilindrada, int potencia, String motor) {
         this.matricula = matricula;
         this.cilindrada = cilindrada;
