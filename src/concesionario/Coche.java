@@ -5,6 +5,8 @@
  */
 package concesionario;
 
+import java.util.Objects;
+
 /**
  *
  * @author DAM
@@ -65,6 +67,39 @@ public class Coche {
     @Override
     public String toString() {
         return "Coche{" + "matricula=" + matricula + ", cilindrada=" + cilindrada + ", potencia=" + potencia + ", motor=" + motor + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Coche other = (Coche) obj;
+        if (this.cilindrada != other.cilindrada) {
+            return false;
+        }
+        if (this.potencia != other.potencia) {
+            return false;
+        }
+        if (!Objects.equals(this.matricula, other.matricula)) {
+            return false;
+        }
+        if (!Objects.equals(this.motor, other.motor)) {
+            return false;
+        }
+        return true;
     }
 
 
